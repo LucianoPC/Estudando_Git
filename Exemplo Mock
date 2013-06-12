@@ -1,0 +1,16 @@
+// Create a mock
+SomeInterface mock = createMock(SomeInterface.class);
+
+// Record behavior
+expect( mock.doStuff( "argument" ) ).andReturn("returnValue");
+
+// Replay behaviour
+replay( mock );
+
+// Executing the code we want to test
+String newValue = test.perform()
+
+assume perform() method calls doStuff() method
+
+// Verify behaviour
+verify( mock );
